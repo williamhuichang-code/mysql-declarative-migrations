@@ -406,3 +406,11 @@ docker exec -it $DevContainer mysql `
     "-p$RootPassword" `
     -e "USE awesome_db; SELECT * FROM _migration_history_log;"
 ```
+
+---
+
+## Taking It Further: Versioned Migrations on PostgreSQL
+
+Unfortunately, sdm only works with MySQL and MariaDB, as stated in the [tool's own README](https://github.com/Beim/schema-data-migration), so I couldn't use it for my personal PostgreSQL database.
+
+Instead, I applied the same idea with **[Alembic](https://alembic.sqlalchemy.org/)** in my self-hosted PostgreSQL project, [homelab-postgres](https://github.com/williamhuichang-code/homelab-postgres). Every schema change there is a numbered revision with `upgrade()` and `downgrade()` steps, and rollback has been tested, the same versioned, reversible workflow this exercise demonstrates.
