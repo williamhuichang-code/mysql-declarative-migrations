@@ -1,0 +1,12 @@
+{
+    "version": "0000",
+    "name": "init",
+    "author": "",
+    "type": "schema",
+    "change": {
+        "forward": {
+            "id": "a4833f8f3e50dd47032bd7a970ac74fcbd6fcaf8"
+        }
+    },
+    "dependencies": []
+}
